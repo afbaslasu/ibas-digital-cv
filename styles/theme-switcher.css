@@ -1,0 +1,31 @@
+#theme-switcher {
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 1000;
+}
+
+.theme {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.theme.active {
+    border-color: var(--mainTextColor);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#theme-light {
+    background-color: #fff;
+}
+
+#theme-dark {
+    background-color: #000;
+}
