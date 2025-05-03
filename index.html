@@ -8,10 +8,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/theme-switcher.css" />
   </head>
-  <body>
+  <body data-theme="light">
+    <!-- Theme Switcher -->
     <div id="theme-switcher">
       <div class="theme active" id="theme-light" data-theme="light"></div>
       <div class="theme" id="theme-dark" data-theme="dark"></div>
@@ -31,14 +37,16 @@
         <img
           id="profile-pic"
           src="./assets/images/profilePix.png"
-          alt="Profile Picture"
+          alt="ibas Profile Picture"
         />
         <div>
           <h1 id="user-name">ISMAIL IBADEHIN</h1>
           <p id="bio">
             Teacher | Writer | Web Developer | Graphics Designer at
-            <a href="https://www.c2harvard.com/teacher" target="_blank">Smilelink Inc.</a>,
-            Google Workspace for Education instructor, YouTuber and teacher at Abraham Lincoln Academy.
+            <a href="https://www.c2harvard.com/teacher" target="_blank"
+              >Smilelink Inc.</a
+            >, Google Workspace for Education instructor, YouTuber and teacher
+            at Abraham Lincoln Academy.
           </p>
           <p id="email"><i class="fas fa-envelope"></i> smile@c2harvard.com</p>
         </div>
@@ -62,7 +70,7 @@
             <i class="fab fa-twitter"></i> Twitter
           </a>
           <a
-            href="https://www.linkedin.com/in/afbaslasu/"
+            href="https://www.linkedin.com/in/ibaslasu/"
             target="_blank"
             class="social-link"
           >
@@ -75,7 +83,11 @@
           >
             <i class="fab fa-github"></i> GitHub
           </a>
-          <a href="./assets/ibasResume_1.pdf" target="_blank" class="social-link">
+          <a
+            href="./assets/ibasResume_1.pdf"
+            target="_blank"
+            class="social-link"
+          >
             <i class="fas fa-download"></i> Resume
           </a>
         </div>
@@ -85,10 +97,16 @@
         <h2>Skills & Qualifications</h2>
         <ul id="qualifications--list">
           <li>✔️ 15+ Years experience in teaching (Mathematics/Physics)</li>
-          <li>✔️ Tech educator & online instructor (Google Workspace & Microsoft Team)</li>
+          <li>
+            ✔️ Tech educator & online instructor (Google Workspace & Microsoft
+            Team)
+          </li>
           <li>✔️ 5+ Years experience in Web design (WordPress)</li>
           <li>✔️ 2+ Years experience in fullstack development</li>
-          <li>✔️ Others: Video Editing, Adobe Illustrator, Photoshop Microsoft Office</li>
+          <li>
+            ✔️ Others: Video Editing, Adobe Illustrator, Photoshop Microsoft
+            Office
+          </li>
         </ul>
       </section>
 
@@ -109,6 +127,98 @@
         </div>
       </section>
 
+      <!-- EDUCATION SECTION -->
+      <div class="container">
+        <section id="education">
+          <h2 class="sub-heading" data-text="Education">Education</h2>
+          <div class="grid-two">
+            <div class="item" data-side="left">
+              <strong>AGRICULTURAL ENGINEERING</strong><br />University of
+              Ilorin, Kwara (2003 - 2007)
+            </div>
+            <div class="item" data-side="right">
+              <strong>SYSTEM MANAGEMENT</strong><br />Computer City College,
+              Ikeja (2001 - 2002)
+            </div>
+            <div class="item" data-side="left">
+              <strong>PYTHON PROGRAMMING</strong><br />Aptech Center, Lekki
+              (2014 - 2015)
+            </div>
+            <div class="item" data-side="right">
+              <strong>MICROSOFT OFFICE SPECIALIST</strong><br />Udemy Academy
+              (Virtual) (2017 - 2018)
+            </div>
+            <div class="item" data-side="left">
+              <strong>WEB DESIGN & DEVELOPMENT</strong><br />Aptech Center,
+              Lekki (2015 - 2016)
+            </div>
+            <div class="item" data-side="right">
+              <strong>ADVANCE WEB DESIGNING</strong><br />MIT (Virtual) (2019 -
+              2020)
+            </div>
+          </div>
+        </section>
+
+        <section id="work-experience">
+          <h2 class="sub-heading" data-text="Work Experience">
+            Work Experience
+          </h2>
+          <div class="grid-two">
+            <div class="item" data-side="left">
+              <strong>MATHS/ICT TEACHER</strong><br />Abraham Lincoln Academy,
+              Abuja (2022 – 2023)
+            </div>
+            <div class="item" data-side="right">
+              <strong>MATHS/ICT TEACHER</strong><br />Cradle2Harvard College,
+              Abuja (2021 – 2022)
+            </div>
+            <div class="item" data-side="left">
+              <strong>MATHS/PHYSICS TEACHER</strong><br />Surestart High School,
+              Abuja (2018 – 2021)
+            </div>
+            <div class="item" data-side="right">
+              <strong>MATHEMATICS TEACHER</strong><br />Deniz International
+              School, Lagos (2011 – 2014)
+            </div>
+            <div class="item" data-side="left">
+              <strong>MATHEMATICS TEACHER</strong><br />Wellington College,
+              Lagos (2016 – 2018)
+            </div>
+            <div class="item" data-side="right">
+              <strong>ASSISTANT SUPERVISOR</strong><br />NikkyPearl Interior,
+              Lagos (2009 – 2011)
+            </div>
+            <div class="item" data-side="left">
+              <strong>ASST. MATHS LECTURER</strong><br />Bida Polytechnic, Niger
+              (2008 – 2009)
+            </div>
+            <div class="item" data-side="right">
+              <strong>MATHS/SCIENCE TEACHER</strong><br />Ikhwan Nur & Pry.
+              School, Lagos (2001 – 2003)
+            </div>
+          </div>
+        </section>
+
+        <section id="projects">
+          <h2 class="sub-heading" data-text="Recent Projects">
+            Recent Projects
+          </h2>
+          <div class="grid-three">
+            <div class="item project-item">
+              <strong>Smilelink Inc.</strong><br />Educational Website (2019 –
+              2020)
+            </div>
+            <div class="item project-item">
+              <strong>Surestart</strong><br />School Website (2021)
+            </div>
+            <div class="item project-item">
+              <strong>Cradle2Harvard</strong><br />School Website (2021)
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- remove this path ................................ -->
+
       <section
         id="work-history-wrapper"
         class="section--page animate-on-scroll"
@@ -116,8 +226,8 @@
         <h2>Work History</h2>
 
         <div class="card--work-history">
-          <P><strong>🚧 MATHEMATICS TEACHER | IT PERSONNEL</strong></P>
-          <P>Abraham Lincoln American Academy</P>
+          <p><strong>🚧 MATHEMATICS TEACHER | IT PERSONNEL</strong></p>
+          <p>Abraham Lincoln American Academy</p>
           <p>2022 - 2023</p>
           <p>
             <strong>[Current Challenge]</strong> Working to improve developer
@@ -249,39 +359,43 @@
 
         <div class="card--project">
           <a href="project1.html"
-            ><span>🏆 </span>Built Surestart school website and configure/setup the school Google Workspace for Education</a
-          >
-        </div>
-
-        
-        <div class="card--project">
-          <a href="project1.html"
-          ><span>🏆 </span>Register and install Google Workspace for Education for Cradle2harvard  International school</a
+            ><span>🏆 </span>Built Surestart school website and configure/setup
+            the school Google Workspace for Education</a
           >
         </div>
 
         <div class="card--project">
           <a href="project1.html"
-            ><span>🏆 </span>Design mobile application for babyshop ecommerce and lunch it google app store</a
-          >
-        </div>
-        
-        <div class="card--project">
-          <a href="project1.html"
-          ><span>🏆 </span>Register, install and setup Google Workspace for Education for Abraham Lincoln American Academy</a
-          >
-        </div>
-        
-        <div class="card--project">
-          <a href="project1.html"
-            ><span>🏆 </span>Co built an ecommerce platform that accept stripe API for
-            payment integration</a
+            ><span>🏆 </span>Register and install Google Workspace for Education
+            for Cradle2harvard International school</a
           >
         </div>
 
         <div class="card--project">
           <a href="project1.html"
-            ><span>🏆 </span>Others: Clone of YouTube, Netflix, Twitter and others - open source project</a
+            ><span>🏆 </span>Design mobile application for babyshop ecommerce
+            and lunch it google app store</a
+          >
+        </div>
+
+        <div class="card--project">
+          <a href="project1.html"
+            ><span>🏆 </span>Register, install and setup Google Workspace for
+            Education for Abraham Lincoln American Academy</a
+          >
+        </div>
+
+        <div class="card--project">
+          <a href="project1.html"
+            ><span>🏆 </span>Co built an ecommerce platform that accept stripe
+            API for payment integration</a
+          >
+        </div>
+
+        <div class="card--project">
+          <a href="project1.html"
+            ><span>🏆 </span>Others: Clone of YouTube, Netflix, Twitter and
+            others - open source project</a
           >
         </div>
       </section>
@@ -311,6 +425,82 @@
 
       document.querySelectorAll(".animate-on-scroll").forEach((el) => {
         observer.observe(el);
+      });
+
+      // education, work experience & project js
+      document.addEventListener("DOMContentLoaded", () => {
+        // Scroll animations for items
+        const options = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target;
+            if (entry.isIntersecting) {
+              if (el.classList.contains("project-item")) {
+                el.classList.remove("swirl-out");
+                el.classList.add("swirl-in");
+              } else {
+                const side = el.getAttribute("data-side");
+                el.classList.remove(side === "left" ? "out-left" : "out-right");
+                el.classList.add(side === "left" ? "in-left" : "in-right");
+              }
+            } else {
+              if (el.classList.contains("project-item")) {
+                el.classList.remove("swirl-in");
+                el.classList.add("swirl-out");
+              } else {
+                const side = el.getAttribute("data-side");
+                el.classList.remove(side === "left" ? "in-left" : "in-right");
+                el.classList.add(side === "left" ? "out-left" : "out-right");
+              }
+            }
+          });
+        }, options);
+        document
+          .querySelectorAll(".item")
+          .forEach((item) => observer.observe(item));
+
+        // Improved typing animation on scroll for sub-headings
+        const headings = document.querySelectorAll(".sub-heading");
+        headings.forEach((h2) => {
+          const text = h2.getAttribute("data-text");
+          h2.textContent = "";
+          h2._chars = text.split("");
+          h2._visibleCount = 0;
+          h2._typingInterval = null;
+        });
+        const headObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              const h2 = entry.target;
+              // Clear any existing interval
+              if (h2._typingInterval) clearInterval(h2._typingInterval);
+              if (entry.isIntersecting) {
+                // type in
+                h2._visibleCount = 0;
+                h2._typingInterval = setInterval(() => {
+                  if (h2._visibleCount < h2._chars.length) {
+                    h2.textContent += h2._chars[h2._visibleCount++];
+                  } else {
+                    clearInterval(h2._typingInterval);
+                    h2._typingInterval = null;
+                  }
+                }, 100);
+              } else {
+                // type out
+                h2._typingInterval = setInterval(() => {
+                  if (h2.textContent.length > 0) {
+                    h2.textContent = h2.textContent.slice(0, -1);
+                  } else {
+                    clearInterval(h2._typingInterval);
+                    h2._typingInterval = null;
+                  }
+                }, 50);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+        headings.forEach((h2) => headObserver.observe(h2));
       });
     </script>
   </body>
