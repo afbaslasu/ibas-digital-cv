@@ -1,191 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        :root {
-            --primary-color: #2A5C82;
-            --secondary-color: #E74C3C;
-            --accent-color: #27AE60;
-            --text-color: #2C3E50;
-            --highlight-color: #F1C40F;
-        }
+      :root {
+        --primary-color: #2a5c82;
+        --secondary-color: #e74c3c;
+        --accent-color: #27ae60;
+        --text-color: #2c3e50;
+        --highlight-color: #f1c40f;
+      }
 
+      .application-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        font-family: "Segoe UI", system-ui, sans-serif;
+        line-height: 1.7;
+        color: var(--text-color);
+      }
+
+      .application-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+
+      .application-header::after {
+        content: "";
+        width: 100px;
+        height: 4px;
+        background: var(--secondary-color);
+        display: block;
+        margin: 1rem auto;
+        border-radius: 2px;
+      }
+
+      .highlight-primary {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+
+      .highlight-secondary {
+        color: var(--secondary-color);
+        font-weight: 600;
+      }
+
+      .key-highlights {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin: 2rem 0;
+        border-left: 4px solid var(--accent-color);
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+
+      .skill-item {
+        display: flex;
+        align-items: center;
+        padding: 0.8rem;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .skill-item:hover {
+        transform: translateY(-3px);
+      }
+
+      .skill-icon {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        color: var(--accent-color);
+      }
+
+      .achievement-list {
+        list-style-type: none;
+        padding-left: 1.5rem;
+      }
+
+      .achievement-list li::before {
+        content: "▹";
+        color: var(--highlight-color);
+        margin-right: 0.8rem;
+      }
+
+      .cta-section {
+        text-align: center;
+        margin-top: 2rem;
+        padding: 1.5rem;
+        background: var(--primary-color);
+        border-radius: 10px;
+        color: white;
+      }
+
+      .cv-link {
+        color: var(--highlight-color);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .cv-link1 {
+        display: inline;
+        margin-right: 30px;
+        border-right: 2px solid var(--secondary-color);
+        padding-right: 40px;
+      }
+
+      .cv-link:hover {
+        color: #fff;
+      }
+
+      @media (max-width: 768px) {
         .application-container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.7;
-            color: var(--text-color);
-        }
-
-        .application-header {
-            text-align: center;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .application-header::after {
-            content: '';
-            width: 100px;
-            height: 4px;
-            background: var(--secondary-color);
-            display: block;
-            margin: 1rem auto;
-            border-radius: 2px;
-        }
-
-        .highlight-primary {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .highlight-secondary {
-            color: var(--secondary-color);
-            font-weight: 600;
-        }
-
-        .key-highlights {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            border-left: 4px solid var(--accent-color);
+          margin: 1rem;
+          padding: 1.5rem;
         }
 
         .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin: 1.5rem 0;
+          grid-template-columns: 1fr;
         }
-
-        .skill-item {
-            display: flex;
-            align-items: center;
-            padding: 0.8rem;
-            background: rgba(255,255,255,0.9);
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .skill-item:hover {
-            transform: translateY(-3px);
-        }
-
-        .skill-icon {
-            font-size: 1.2rem;
-            margin-right: 1rem;
-            color: var(--accent-color);
-        }
-
-        .achievement-list {
-            list-style-type: none;
-            padding-left: 1.5rem;
-        }
-
-        .achievement-list li::before {
-            content: '▹';
-            color: var(--highlight-color);
-            margin-right: 0.8rem;
-        }
-
-        .cta-section {
-            text-align: center;
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background: var(--primary-color);
-            border-radius: 10px;
-            color: white;
-        }
-
-        .cv-link {
-            color: var(--highlight-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .cv-link1{
-          display: inline;
-          margin-right: 30px;
-          border-right: 2px solid var(--secondary-color);
-          padding-right: 40px;
-        }
-
-        .cv-link:hover {
-            color: #fff;
-        }
-
-        @media (max-width: 768px) {
-            .application-container {
-                margin: 1rem;
-                padding: 1.5rem;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <article class="application-container">
-        <header class="application-header">
-            <h1 class="highlight-primary">About Me: Ismail Ibadehin</h1>
-            <p class="highlight-secondary">Innovative Educator & Technology Integrator</p>
-        </header>
+      <header class="application-header">
+        <h1 class="highlight-primary">About Me: Ismail Ibadehin</h1>
+        <p class="highlight-secondary">
+          Innovative Educator & Technology Integrator
+        </p>
+      </header>
 
-        <section class="introduction-section">
-            <p>I have a dynamic background that spans <span class="highlight-primary">teaching</span> (Mathematics/Physics), <span class="highlight-primary">website develoment</span>, and <span class="highlight-primary">graphics design</span>. These equipped me with a unique blend of <span class="highlight-primary">subject matter expertise</span> and <span class="highlight-primary">technological innovation</span>. My approach is rooted in a genuine passion for autodaidact learning, where I combine enthusiasm with a commitment to unlocking my full potential.</p>
-        </section>
+      <section class="introduction-section">
+        <p>
+          I have a dynamic background that spans
+          <span class="highlight-primary">teaching</span> (Mathematics/Physics),
+          <span class="highlight-primary">website develoment</span>, and
+          <span class="highlight-primary">graphics design</span>. These equipped
+          me with a unique blend of
+          <span class="highlight-primary">subject matter expertise</span> and
+          <span class="highlight-primary">technological innovation</span>. My
+          approach is rooted in a genuine passion for autodaidact learning,
+          where I combine enthusiasm with a commitment to unlocking my full
+          potential.
+        </p>
+      </section>
 
-        <section class="key-highlights">
-            <h2>Career Highlights <i class="fas fa-star skill-icon"></i></h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fas fa-chalkboard-teacher skill-icon"></i>
-                    <div>
-                        <h3>Teaching Excellence</h3>
-                        <p>Consistently achieved excellent results preparing students for WAEC, UTME, and IGCSE</p>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <i class="fas fa-laptop-code skill-icon"></i>
-                    <div>
-                        <h3>Technical Expertise</h3>
-                        <p>Proficient in HTML, CSS, JavaScript, React, Postgre sql, Mongodb, Git, Adobe Illustrator, and Microsoft Office</p>
-                    </div>
-                </div>
+      <section class="key-highlights">
+        <h2>Career Highlights <i class="fas fa-star skill-icon"></i></h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <i class="fas fa-chalkboard-teacher skill-icon"></i>
+            <div>
+              <h3>Teaching Excellence</h3>
+              <p>
+                Consistently achieved excellent results preparing students for
+                WAEC, UTME, and IGCSE
+              </p>
             </div>
+          </div>
 
-            <h3>Notable Achievements:</h3>
-            <ul class="achievement-list">
-                <li>Organized advanced tutorials for prestigious institutions including Yabatech, Laspotech and Bida Poly</li>
-                <li>Pioneered educational technology initiatives at Surestart High School, Cradle2Harvard International, and Abraham Lincoln Academy</li>
-                <li>Trained 500+ staff members on Google Workspace for Education</li>
-            </ul>
-        </section>
-
-        <section class="cta-section">
-            <h2>Explore My Qualifications</h2>
-            <div class="cv-link1">
-              <a href="https://github.com/afbaslasu" class="cv-link" target="_blank">
-                View Full CV on GitHub <i class="fas fa-external-link-alt"></i>
-            </a>
+          <div class="skill-item">
+            <i class="fas fa-laptop-code skill-icon"></i>
+            <div>
+              <h3>Technical Expertise</h3>
+              <p>
+                Proficient in HTML, CSS, JavaScript, React, Postgre sql,
+                Mongodb, Git, Adobe Illustrator, and Microsoft Office
+              </p>
             </div>
-            <a href="index.html" class="cv-link" target="_blank">
-                View Full CV on My Page <i class="fas fa-external-link-alt"></i>
-            </a>
-        </section>
+          </div>
+        </div>
+
+        <h3>Notable Achievements:</h3>
+        <ul class="achievement-list">
+          <li>
+            Organized advanced tutorials for prestigious institutions including
+            Yabatech, Laspotech and Bida Poly
+          </li>
+          <li>
+            Pioneered educational technology initiatives at Surestart High
+            School, Cradle2Harvard International, and Abraham Lincoln Academy
+          </li>
+          <li>Trained 500+ staff members on Google Workspace for Education</li>
+        </ul>
+      </section>
+
+      <section class="cta-section">
+        <h2>Explore My Qualifications</h2>
+        <div class="cv-link1">
+          <a
+            href="https://github.com/afbaslasu"
+            class="cv-link"
+            target="_blank"
+          >
+            View Full CV on GitHub <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+        <a href="index.html" class="cv-link" target="_blank">
+          View Full CV on My Page <i class="fas fa-external-link-alt"></i>
+        </a>
+      </section>
     </article>
-</body>
+  </body>
 </html>
