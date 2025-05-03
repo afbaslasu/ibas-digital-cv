@@ -45,7 +45,6 @@
 body {
   background-color: var(--mainBgColor);
   color: var(--text-color-hero);
-  margin: 0;
   padding: 20px;
 }
 
@@ -67,7 +66,7 @@ body[data-theme="dark"] {
   background: var(--card-bg-light);
   border-radius: 10px;
   padding: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 body[data-theme="dark"] .section--page,
@@ -273,8 +272,8 @@ a {
 }
 
 .card--project {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   border-top: 1px solid var(--mainBorderColor);
 }
 
@@ -290,8 +289,8 @@ a {
 
 .card--work-history {
   border-left: 1px solid var(--mainBorderColor);
-  margin-top: 3em;
-  margin-bottom: 3em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   padding-left: 2em;
 }
 
@@ -316,7 +315,7 @@ p {
   margin: 5px 0;
 }
 section {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .grid-two,
@@ -478,7 +477,7 @@ body.dark .sub-heading {
   padding: 2rem;
   background: var(--card-bg-light);
   border-radius: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 body[data-theme="dark"] #duties {
@@ -487,7 +486,7 @@ body[data-theme="dark"] #duties {
 }
 
 #duties .role-block {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #duties .role-block h3 {
@@ -573,7 +572,7 @@ body[data-theme="dark"] #duties {
   .section--page {
     padding-top: 1em;
     padding-bottom: 1em;
-    margin-top: 3em;
+    margin-top: 1em;
   }
 
   #wrapper--hero {
