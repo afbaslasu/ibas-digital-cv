@@ -589,6 +589,10 @@ body[data-theme="dark"] #duties {
   transform: scale(1.2);
 }
 
+.loading {
+  color: rgb(216, 30, 30);
+}
+
 @media (min-width: 600px) {
   .grid-two {
     grid-template-columns: 1fr 1fr;
