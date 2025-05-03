@@ -74,7 +74,7 @@ body[data-theme="dark"] .container {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 * Typography */ h1 {
-  font-size: 2.5em;
+  font-size: 1.5em;
   margin-bottom: 10px;
 }
 p,
@@ -90,7 +90,7 @@ a {
 
 /* Sub-Heading Typing */
 .sub-heading {
-  font-size: 1.5em;
+  font-size: 1.2em;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
@@ -103,7 +103,7 @@ a {
 /* Items */
 .item {
   background: var(--item-bg-light);
-  padding: 15px 20px;
+  padding: 10px;
   border-radius: 8px;
   opacity: 0;
 }
@@ -126,9 +126,9 @@ body[data-theme="dark"] .item {
 
 /* Container */
 #container--main {
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 15px;
   /* I want this color only on white bg... change the theme switcher to toggle */
   /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); */
 }
@@ -507,6 +507,86 @@ body.dark .sub-heading {
   background: #ecf0f1;
   padding: 15px 20px;
   border-radius: 8px;
+}
+
+/* Duties Section Styling */
+#duties {
+  padding: 2rem;
+  background: var(--card-bg-light);
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+body[data-theme="dark"] #duties {
+  background: var(--card-bg-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#duties .role-block {
+  margin-bottom: 2rem;
+}
+
+#duties .role-block h3 {
+  font-size: 1.25em;
+  margin-bottom: 0.5rem;
+  color: var(--mainLinkColor);
+}
+
+/* Base UL styling */
+#duties .role-block ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Teacher duties: use chalkboard icon */
+#duties .role-block:nth-of-type(1) ul li::before {
+  content: "\f51c"; /* fas-chalkboard-teacher */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 0.5em;
+  color: var(--mainLinkColor);
+}
+
+/* WordPress designer duties: use WordPress icon */
+#duties .role-block:nth-of-type(2) ul li::before {
+  content: "\f19a"; /* fab-wordpress */
+  font-family: "Font Awesome 5 Brands";
+  margin-right: 0.5em;
+  color: #21759b;
+}
+
+/* Web developer duties: use code icon */
+#duties .role-block:nth-of-type(3) ul li::before {
+  content: "\f121"; /* fas-code */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 0.5em;
+  color: var(--mainLinkColor);
+}
+
+/* List item text */
+#duties .role-block ul li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+/* Ensure icons scale on hover */
+#duties .role-block ul li:hover::before {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
+/* Projects & Accomplishments trophy icon */
+.trophy-icon {
+  color: gold;
+  margin-right: 0.5em;
+  font-size: 1.2em;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.card--project a:hover .trophy-icon {
+  transform: scale(1.2);
 }
 
 @media (min-width: 600px) {
