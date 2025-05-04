@@ -31,21 +31,20 @@
 }
 
 * {
-  font-family: "Readex Pro", sans-serif;
-  line-height: 1.6;
-  box-sizing: border-box;
-  color: var(--mainTextColor);
-  transition: background-color 0.3s ease, color 0.2s ease;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Readex Pro", sans-serif;
+  line-height: 1.4;
+  color: var(--mainTextColor);
+  transition: background-color 0.3s ease, color 0.2s ease;
   transition: color var(--transition), background var(--transition);
 }
 
 body {
   background-color: var(--mainBgColor);
   color: var(--text-color-hero);
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 body {
@@ -60,30 +59,44 @@ body[data-theme="dark"] {
   color: var(--dark-text);
 }
 
-/* Containers & Sections */
-.section--page,
-.container {
-  background: var(--card-bg-light);
+/* Sections => container */
+.section--page {
+  background: var(--cardBg);
   border-radius: 10px;
-  padding: 30px;
-  margin-bottom: 20px;
+  padding: 1.2rem;
+  margin: 1.2rem 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+[data-theme="dark"] .section--page {
+  box-shadow: var(--shadow-dark);
+}
+
 body[data-theme="dark"] .section--page,
 body[data-theme="dark"] .container {
   background: var(--card-bg-dark);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
-* Typography */ h1 {
-  font-size: 1.4em;
-  margin-bottom: 10px;
-}
-p,
-li,
+* Typography */
 span {
-  font-size: 0.9em;
-  line-height: 1.4;
   color: var(--secondaryTextColor);
+}
+
+.smilelink{
+  /* background: var(--cardBg); */
+  padding: 0 5px;
+  border-radius: 2px;
+  border: 2px solid var(--text-color-hero);
+  transition: all 0.3s ease;
+  /* color: var(--dark-text); */
+}
+
+.smilelink:hover{
+  transform: scale(1.2);
+}
+
+body[data-theme="dark"] .smilelink {
+  color: var(--dark-text);
 }
 
 a {
@@ -139,19 +152,6 @@ body[data-theme="dark"] .item {
   /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); */
 }
 
-/* Sections */
-.section--page {
-  background: var(--cardBg);
-  border-radius: 12px;
-  padding: 2rem;
-  margin: 2rem 0;
-  box-shadow: var(--shadow-light);
-}
-
-[data-theme="dark"] .section--page {
-  box-shadow: var(--shadow-dark);
-}
-
 /* Hero Section */
 #wrapper--hero {
   display: flex;
@@ -163,7 +163,7 @@ body[data-theme="dark"] .item {
     var(--mainLinkColor) 0%,
     var(--mainBgColor) 100%
   );
-  border-radius: 12px;
+  border-radius: 10px;
   color: var(--text-color-hero);
 }
 
@@ -180,15 +180,14 @@ body[data-theme="dark"] .item {
 #socials--list {
   display: flex;
   justify-content: space-between;
-  column-gap: 1em;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .social-link {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 8px;
   background: var(--cardBg);
   transition: all 0.3s ease;
@@ -271,9 +270,20 @@ a {
   align-items: center;
 }
 
+.card--techstack:hover {
+  transform: scale(1.05);
+}
+
+.section-heading{
+  margin-bottom: 1rem;
+}
+.section-headings{
+  padding-top: 1rem;
+  padding-bottom: .7rem;
+}
+
 .card--project {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding: .5em .8em;
   border-top: 1px solid var(--mainBorderColor);
 }
 
@@ -530,7 +540,7 @@ body[data-theme="dark"] #duties {
 /* List item text */
 #duties .role-block ul li {
   margin-bottom: 0.75rem;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
 /* Ensure icons scale on hover */
@@ -543,13 +553,13 @@ body[data-theme="dark"] #duties {
 .trophy-icon {
   color: gold;
   margin-right: 0.5em;
-  font-size: 1.1em;
+  font-size: .9em;
   vertical-align: middle;
   transition: transform 0.2s ease;
 }
 
 .card--project a:hover .trophy-icon {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 .loading {
@@ -568,7 +578,7 @@ body[data-theme="dark"] #duties {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .section--page {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -577,17 +587,15 @@ body[data-theme="dark"] #duties {
 
   #wrapper--hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 1em;
+    text-align: center;
   }
 
   #profile-pic {
     width: 200px;
     height: 200px;
-  }
-
-  #wrapper--hero {
-    flex-direction: column;
   }
 
   .card--work-history {
@@ -597,6 +605,8 @@ body[data-theme="dark"] #duties {
   #socials--list {
     display: flex;
     flex-direction: column;
-    row-gap: 1em;
+    row-gap: 5px;
+    margin: 2px auto;
+    padding: 2px auto;
   }
 }
